@@ -1,0 +1,21 @@
+name: probe
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: date
+        run: date -u
+
+      - name: uname
+        run: uname -a
+
+      - name: hello
+        run: echo "runner assigned, salam-kairos public repo probe succeeded"
